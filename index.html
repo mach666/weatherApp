@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>weatherdashboard.html </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="weather.js" defer></script>
+  <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+
+  <div class="container" style="border: 2px solid gray;border-right: 3px solid gray">
+    <div class="row">
+      <div class="col-md-12" style="border-bottom: 2px solid gray;">
+        <H1>Weather Dasboard:</H1>
+        <form>
+          <div class="form-group row">
+
+            <div class="col-sm-10">
+              <label for="date" class="col-sm-1.5 col-form-label">
+                <h3>Date:</h3>
+              </label>
+              <input type="text" readonly class="readonly-text" id="date"><br>
+              <input type="radio" id="celcius" name="gender" value="metric" checked>
+              <label for="celcius">Celsius</label>
+              <input type="radio" id="fahrenheit" name="gender" value="imperial">
+              <label for="fahrenheit">Fahrenheit</label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-lg-6" style="border: 1px solid gray;">
+        <label for="city" class="col-sm-1.5 col-form-label">City:</label>
+        <input type="text" id="city1" placeholder=" Enter current_city"><br>
+        <H6>Current Weather:</H6>
+        <label for="wheatherdescription1" class="col-sm-1.5 col-form-label">Wheather:</label>
+        <input type="text" readonly class="readonly-text" id="wheatherdescription1"> <img id='currentCity1' src=''
+          height="45px"><br>
+        <label for="latitude1" class="col-sm-1.5 col-form-label">Latitude:</label>
+        <input type="text" readonly class="readonly-text" id="latitude1"><br>
+        <label for="longitude1" class="col-sm-1.5 col-form-label">Longitude:</label>
+        <input type="text" readonly class="readonly-text" id="longitude1"><br>
+        <label for="temprature1" class="col-sm-1.5 col-form-label">Temprature:</label>
+        <input type="text" readonly class="readonly-text" id="temprature1"><br>
+        <label for="pressure1" class="col-sm-1.5 col-form-label">Pressure:</label>
+        <input type="text" readonly class="readonly-text" id="pressure1"><br>
+        <label for="currenttime1" class="col-sm-1.5 col-form-label">Current Time:</label>
+        <input type="text" readonly class="readonly-text time" id="currenttime1"><br>
+        <label for="sunrisetime1" class="col-sm-1.5 col-form-label">Sunrise Time:</label>
+        <input type="text" readonly class="readonly-text time" id="sunrisetime1"><br>
+        <label for="sunsettime1" class="col-sm-1.5 col-form-label">Sunset Time:</label>
+        <input type="text" readonly class="readonly-text time" id="sunsettime1"><br>
+        <label for="windspeed1" class="col-sm-1.5 col-form-label">Wind Speed:</label>
+        <input type="text" readonly class="readonly-text" id="windspeed1"><br>
+        <label for="winddirection1" class="col-sm-1.5 col-form-label">Wind Direction:</label>
+        <input type="text" readonly class="readonly-text" id="winddirection1"><br>
+        <H6>Hourly Forecast (For Next 3 Hours):</H6>
+        <label for="hourly1st1" class="col-sm-1.5 col-form-label">1 Hour Forcast details From:</label>
+        <input type="text" readonly class="readonly-text time" id="hourly1st1"><br>
+        <label for="hourly1st1weatherdescription" class="col-sm-1.5 col-form-label">Wheather:</label>
+        <input type="text" readonly class="readonly-text" id="hourly1st1weatherdescription"><img src='' height='45px'
+          id='hourly1st1icon'><br>
+        <label for="hourly1st1temp" class="col-sm-1.5 col-form-label">Temprature:</label>
+        <input type="text" readonly class="readonly-text" id="hourly1st1temp"><br>
+        <label for="hourly1st1pressure" class="col-sm-1.5 col-form-label">Pressure:</label>
+        <input type="text" readonly class="readonly-text" id="hourly1st1pressure"><br>
+        <label for="hourly1st1windspeed" class="col-sm-1.5 col-form-label">Wind Speed:</label>
+        <input type="text" readonly class="readonly-text" id="hourly1st1windspeed"><br>
+        <label for="hourly1st1winddirection" class="col-sm-1.5 col-form-label">Wind Direction:</label>
+        <input type="text" readonly class="readonly-text" id="hourly1st1winddirection"><br>
+        <label for="hourly1st1pop" class="col-sm-1.5 col-form-label">POP:</label>
+        <input type="text" readonly class="readonly-text" id="hourly1st1pop"><br>
+
+        <label for="hourly2nd1" class="col-sm-1.5 col-form-label">1 Hour Forcast details From:</label>
+        <input type="text" readonly class="readonly-text time" id="hourly2nd1"><br>
+        <label for="hourly2nd1weatherdescription" class="col-sm-1.5 col-form-label">Wheather:</label>
+        <input type="text" readonly class="readonly-text" id="hourly2nd1weatherdescription"><img src='' height='45px'
+          id='hourly2nd1icon'><br>
+        <label for="hourly2nd1temp" class="col-sm-1.5 col-form-label">Temprature:</label>
+        <input type="text" readonly class="readonly-text" id="hourly2nd1temp"><br>
+        <label for="hourly2nd1pressure" class="col-sm-1.5 col-form-label">Pressure:</label>
+        <input type="text" readonly class="readonly-text" id="hourly2nd1pressure"><br>
+        <label for="hourly2nd1windspeed" class="col-sm-1.5 col-form-label">Wind Speed:</label>
+        <input type="text" readonly class="readonly-text" id="hourly2nd1windspeed"><br>
+        <label for="hourly2nd1winddirection" class="col-sm-1.5 col-form-label">Wind Direction:</label>
+        <input type="text" readonly class="readonly-text" id="hourly2nd1winddirection"><br>
+        <label for="hourly2nd1pop" class="col-sm-1.5 col-form-label">POP:</label>
+        <input type="text" readonly class="readonly-text" id="hourly2nd1pop"><br>
+
+        <label for="hourly3rd1" class="col-sm-1.5 col-form-label">1 Hour Forcast details From:</label>
+        <input type="text" readonly class="readonly-text time" id="hourly3rd1"><br>
+        <label for="hourly3rd1weatherdescription" class="col-sm-1.5 col-form-label">Wheather:</label>
+        <input type="text" readonly class="readonly-text" id="hourly3rd1weatherdescription"><img src='' height='45px'
+          id='hourly3rd1icon'><br>
+        <label for="hourly3rd1temp" class="col-sm-1.5 col-form-label">Temprature:</label>
+        <input type="text" readonly class="readonly-text" id="hourly3rd1temp"><br>
+        <label for="hourly3rd1pressure" class="col-sm-1.5 col-form-label">Pressure:</label>
+        <input type="text" readonly class="readonly-text" id="hourly3rd1pressure"><br>
+        <label for="hourly3rd1windspeed" class="col-sm-1.5 col-form-label">Wind Speed:</label>
+        <input type="text" readonly class="readonly-text" id="hourly3rd1windspeed"><br>
+        <label for="hourly3rd1winddirection" class="col-sm-1.5 col-form-label">Wind Direction:</label>
+        <input type="text" readonly class="readonly-text" id="hourly3rd1winddirection"><br>
+        <label for="hourly3rd1pop" class="col-sm-1.5 col-form-label">POP:</label>
+        <input type="text" readonly class="readonly-text" id="hourly3rd1pop"><br>
+
+
+      </div>
+
+
+      <div class="col-sm-6" style="border: 1px solid gray;float: right;">
+        <label for="city" class="col-sm-1.5 col-form-label">City:</label>
+        <input type="text" id="city2" placeholder=" Enter current_city"><br>
+        <H6>Current Weather:</H6>
+        <label for="wheatherdescription2" class="col-sm-1.5 col-form-label">Wheather:</label>
+        <input type="text" readonly class="readonly-text" id="wheatherdescription2"> <img id='currentCity2' src=''
+          height="45px"><br>
+        <label for="latitude2" class="col-sm-1.5 col-form-label">Latitude:</label>
+        <input type="text" readonly class="readonly-text" id="latitude2"><br>
+        <label for="longitude2" class="col-sm-1.5 col-form-label">Longitude:</label>
+        <input type="text" readonly class="readonly-text" id="longitude2"><br>
+        <label for="temprature2" class="col-sm-1.5 col-form-label">Temprature:</label>
+        <input type="text" readonly class="readonly-text" id="temprature2"><br>
+        <label for="pressure2" class="col-sm-1.5 col-form-label">Pressure:</label>
+        <input type="text" readonly class="readonly-text" id="pressure2"><br>
+        <label for="currenttime2" class="col-sm-1.5 col-form-label">Current Time:</label>
+        <input type="text" readonly class="readonly-text time" id="currenttime2"><br>
+        <label for="sunrisetime2" class="col-sm-1.5 col-form-label">Sunrise Time:</label>
+        <input type="text" readonly class="readonly-text time" id="sunrisetime2"><br>
+        <label for="sunsettime2" class="col-sm-1.5 col-form-label">Sunset Time:</label>
+        <input type="text" readonly class="readonly-text time" id="sunsettime2"><br>
+        <label for="windspeed2" class="col-sm-1.5 col-form-label">Wind Speed:</label>
+        <input type="text" readonly class="readonly-text" id="windspeed2"><br>
+        <label for="winddirection2" class="col-sm-1.5 col-form-label">Wind Direction:</label>
+        <input type="text" readonly class="readonly-text" id="winddirection2"><br>
+        <H6>Hourly Forecast (For Next 3 Hours):</H6>
+        <label for="hourly1st2" class="col-sm-1.5 col-form-label">1 Hour Forcast details From:</label>
+        <input type="text" readonly class="readonly-text time" id="hourly1st2"><br>
+        <label for="hourly1st2weatherdescription" class="col-sm-1.5 col-form-label">Wheather:</label>
+        <input type="text" readonly class="readonly-text" id="hourly1st2weatherdescription"><img src='' height='45px'
+          id='hourly1st2icon'><br>
+        <label for="hourly1st2temp" class="col-sm-1.5 col-form-label">Temprature:</label>
+        <input type="text" readonly class="readonly-text" id="hourly1st2temp"><br>
+        <label for="hourly1st2pressure" class="col-sm-1.5 col-form-label">Pressure:</label>
+        <input type="text" readonly class="readonly-text" id="hourly1st2pressure"><br>
+        <label for="hourly1st2windspeed" class="col-sm-1.5 col-form-label">Wind Speed:</label>
+        <input type="text" readonly class="readonly-text" id="hourly1st2windspeed"><br>
+        <label for="hourly1st2winddirection" class="col-sm-1.5 col-form-label">Wind Direction:</label>
+        <input type="text" readonly class="readonly-text" id="hourly1st2winddirection"><br>
+        <label for="hourly1st2pop" class="col-sm-1.5 col-form-label">POP:</label>
+        <input type="text" readonly class="readonly-text" id="hourly1st2pop"><br>
+
+        <label for="hourly2nd2" class="col-sm-1.5 col-form-label">1 Hour Forcast details From:</label>
+        <input type="text" readonly class="readonly-text time" id="hourly2nd2"><br>
+        <label for="hourly2nd2weatherdescription" class="col-sm-1.5 col-form-label">Wheather:</label>
+        <input type="text" readonly class="readonly-text" id="hourly2nd2weatherdescription"><img src='' height='45px'
+          id='hourly2nd2icon'><br>
+        <label for="hourly2nd2temp" class="col-sm-1.5 col-form-label">Temprature:</label>
+        <input type="text" readonly class="readonly-text" id="hourly2nd2temp"><br>
+        <label for="hourly2nd2pressure" class="col-sm-1.5 col-form-label">Pressure:</label>
+        <input type="text" readonly class="readonly-text" id="hourly2nd2pressure"><br>
+        <label for="hourly2nd2windspeed" class="col-sm-1.5 col-form-label">Wind Speed:</label>
+        <input type="text" readonly class="readonly-text" id="hourly2nd2windspeed"><br>
+        <label for="hourly2nd2winddirection" class="col-sm-1.5 col-form-label">Wind Direction:</label>
+        <input type="text" readonly class="readonly-text" id="hourly2nd2winddirection"><br>
+        <label for="hourly2nd2pop" class="col-sm-1.5 col-form-label">POP:</label>
+        <input type="text" readonly class="readonly-text" id="hourly2nd2pop"><br>
+
+        <label for="hourly3rd2" class="col-sm-1.5 col-form-label">1 Hour Forcast details From:</label>
+        <input type="text" readonly class="readonly-text time" id="hourly3rd2"><br>
+        <label for="hourly3rd2weatherdescription" class="col-sm-1.5 col-form-label">Wheather:</label>
+        <input type="text" readonly class="readonly-text" id="hourly3rd2weatherdescription"><img src='' height='45px'
+          id='hourly3rd2icon'><br>
+        <label for="hourly3rd2temp" class="col-sm-1.5 col-form-label">Temprature:</label>
+        <input type="text" readonly class="readonly-text" id="hourly3rd2temp"><br>
+        <label for="hourly3rd2pressure" class="col-sm-1.5 col-form-label">Pressure:</label>
+        <input type="text" readonly class="readonly-text" id="hourly3rd2pressure"><br>
+        <label for="hourly3rd2windspeed" class="col-sm-1.5 col-form-label">Wind Speed:</label>
+        <input type="text" readonly class="readonly-text" id="hourly3rd2windspeed"><br>
+        <label for="hourly3rd2winddirection" class="col-sm-1.5 col-form-label">Wind Direction:</label>
+        <input type="text" readonly class="readonly-text" id="hourly3rd2winddirection"><br>
+        <label for="hourly3rd2pop" class="col-sm-1.5 col-form-label">POP:</label>
+        <input type="text" readonly class="readonly-text" id="hourly3rd2pop"><br>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+</body>
+
+</html>

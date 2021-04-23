@@ -1,0 +1,12 @@
+.readonly-text {
+  border: hidden;
+  cursor: default;
+}
+.time {
+  width: 230px;
+}
+
+.readonly-text:focus {
+  outline: none;
+  cursor: default;
+}
